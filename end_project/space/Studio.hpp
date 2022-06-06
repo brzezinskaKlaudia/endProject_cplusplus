@@ -8,7 +8,8 @@ class Studio{
 public:
     //constructor
     Studio();
-    Studio(int i_personCapacity, int i_area, int i_hight, string i_address, string i_name);
+    Studio(int i_personCapacity, int i_area, int i_hight, string &i_address, string &i_name);
+    Studio &operator=(const Studio &i_src);
     
     //destructor
     ~Studio();
@@ -17,8 +18,8 @@ public:
     void setPersonCapacity(int i_personCapacity);
     void setArea(int i_area);
     void setHight(int i_hight);
-    void setAddress(string i_address);
-    void setName(string i_name);
+    void setAddress(string &i_address);
+    void setName(string &i_name);
     
     // getter
     int getPersonCapacity();

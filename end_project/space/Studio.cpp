@@ -13,7 +13,7 @@ string address;
 Studio::Studio(){
     
 }
-Studio::Studio( int i_personCapacity, int i_area, int  hight, string i_name,  string i_address)
+Studio::Studio( int i_personCapacity, int i_area, int  hight, string &i_name,  string &i_address)
   : personCapacity(i_personCapacity),
     area(i_area),
     hight(hight),
@@ -38,7 +38,7 @@ void Studio::setArea(int i_area)
     area = i_area;
 }
 
-void Studio::setName(string i_name)
+void Studio::setName(string &i_name)
 {
     name = i_name;
 }
@@ -48,7 +48,7 @@ void Studio::setHight(int i_hight)
     hight = i_hight;
 }
 
-void Studio::setAddress(string i_address)
+void Studio::setAddress(string &i_address)
 {
     address = i_address;
 }

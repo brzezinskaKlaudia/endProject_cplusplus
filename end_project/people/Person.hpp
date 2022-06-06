@@ -11,12 +11,13 @@ class Person{
 public:
     //constructor
     Person();
-    Person(int  &id, string const &i_firstName, const string &i_lastName, string &i_email, string &i_telephone);
+    Person(int  i_id,const string  &i_firstName, const string &i_lastName, string &i_email, string &i_telephone);
+    
     //destructor
     ~Person();
     
     // setter
-    void setId(int &i_id);
+    void setId(int i_id);
     void setFirstName(string &i_firstName);
     void setLastName(string &i_lastName);
     void setEmail(string &i_email);
@@ -29,7 +30,11 @@ public:
     string getEmail();
     string getTelephone();
     
+    virtual void print();
+        
+    
 private:
+    static std::vector<Person *> g_personList;
     int id;
     string firstName;
     string lastName;

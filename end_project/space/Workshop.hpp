@@ -9,15 +9,15 @@ class Workshop{
 public:
     //constructor
     Workshop();
-    Workshop(Studio i_studio, string i_name, Trainer i_teacher);
+    Workshop(const Studio *i_studio, string &i_name, const Trainer *i_teacher);
     
     //destructor
     ~Workshop();
     
     // setter
-    void setStudio(Studio i_studio);
-    void setName(string i_name);
-    void setTeacher(Trainer i_teacher);
+    void setStudio(const Studio *i_studio);
+    void setName(string &i_name);
+    void setTeacher(const Trainer *i_teacher);
     
     // getter
     Studio getStudio();
@@ -25,8 +25,8 @@ public:
     Trainer getTeacher();
     
 private:
-    Studio studio;
+    const Studio *studio;
     string name;
-    Trainer teacher;
+    const Trainer *teacher;
     
 };

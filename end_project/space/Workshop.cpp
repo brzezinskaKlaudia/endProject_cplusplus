@@ -5,7 +5,7 @@ using namespace std;
 Workshop::Workshop(){
     
 }
-Workshop::Workshop( Studio i_studio, string i_name, Trainer  i_trainer)
+Workshop::Workshop( const Studio *i_studio, string &i_name, const Trainer  *i_trainer)
   : studio(i_studio),
     name(i_name),
     teacher(i_trainer)
@@ -19,16 +19,16 @@ Workshop::~Workshop()
 }
 
 // setter
-void Workshop::setName(string i_name){
+void Workshop::setName(string &i_name){
     name= i_name;
 }
 
-void Workshop::setStudio(Studio i_studio)
+void Workshop::setStudio(const Studio *i_studio)
 {
     studio = i_studio;
 }
 
-void Workshop::setTeacher(Trainer i_teacher)
+void Workshop::setTeacher(const Trainer *i_teacher)
 {
     teacher = i_teacher;
 }
@@ -42,11 +42,11 @@ string Workshop::getName()
 }
 
 Studio Workshop::getStudio(){
-    return studio;
+    return *studio;
 }
 
 Trainer Workshop::getTeacher(){
-    return teacher;
+    return *teacher;
 }
 
 

@@ -54,7 +54,7 @@ int countPeople(string memberType){
     return counter;
 }
 
-void addNewMember(string memberType){
+void addNewMember(string &memberType){
     string file = "";
     file = switchFiles(memberType);
     
@@ -94,6 +94,7 @@ void addNewMember(string memberType){
         newStudent.setEmail(email);
         newStudent.setTelephone(telephone);
         newStudent.setIsClubMember(isClubMemberBool);
+        newStudent.print();
         
         ofs << newStudent.getId() << ","
         << newStudent.getFirstName() << ","
@@ -101,6 +102,7 @@ void addNewMember(string memberType){
         << newStudent.getEmail() << ","
         << newStudent.getTelephone() << ","
         << newStudent.getIsClubMember() << ";";
+        
     }
     else if(memberType == "trainer"){
         cout << "Give the aerial speciality \n ";
@@ -113,6 +115,7 @@ void addNewMember(string memberType){
         newTrainer.setEmail(email);
         newTrainer.setTelephone(telephone);
         newTrainer.setAerialSpeciality(aerialSpeciality);
+        newTrainer.print();
         
         ofs << newTrainer.getId() << ","
         << newTrainer.getFirstName() << ","
@@ -192,7 +195,7 @@ int main() {
         {
             cout << "Excellent! \n" ;
             cout << "we have " << countPeople("trainer") << " trainers \n";
-            cout << "and " <<    countPeople("student") << " stundets \n";
+            cout << "and " <<  countPeople("student") << " stundets \n";
             break;
         }
         case 'B' :
