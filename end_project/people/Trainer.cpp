@@ -35,3 +35,7 @@ void Trainer::setAerialSpeciality(string &i_aerialSpeciality){
 string Trainer::getAerialSpeciality(){
     return aerialSpeciality;
 }
+
+void Trainer::print() {
+    cout << ">>New trainer added\n";
+}

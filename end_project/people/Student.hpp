@@ -21,10 +21,8 @@ public:
     // getter
     bool getIsClubMember();
     
-    void print()
-        {
-            cout << ">>New trainer added\n";
-        }
+    void print();
+        
     
 private:
     bool isClubMember;

@@ -21,10 +21,8 @@ public:
     // getter
     string getAerialSpeciality();
     
-    void print()
-        {
-              cout << ">>New student added\n";
-        }
+    void print();
+       
     
 private:
     string aerialSpeciality;

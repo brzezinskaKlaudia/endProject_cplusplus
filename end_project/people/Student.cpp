@@ -32,3 +32,7 @@ void Student::setIsClubMember(bool &i_isClubMember){
 bool Student::getIsClubMember(){
     return isClubMember;
 }
+
+void Student::print(){
+    cout << ">>New student added\n";
+}
